@@ -3,7 +3,7 @@ from django.shortcuts import render
 from job.models import Job
 
 def homepage(request):
-    jobsdata=Job.objects.all()
+    jobsdata=Job.objects.all().order_by('job_title')
     data={
         'jobsdata':jobsdata
         }
