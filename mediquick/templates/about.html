@@ -1,0 +1,61 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="/static/about.css">
+ </head>
+<body>
+<header>
+    <div class="logo">
+      <img src="/static/imgg/KHO-JOBT.png" class="khojob">
+</div>
+    <nav>
+      <ul>
+        <li class="{% if request.path == '/' %} active{% endif %}"><a  href="{% url 'home' %}">Home</a> </li>
+      <li class="{% if request.path == '/aboutus/' %} active{% endif %}"><a  href="{% url 'about' %}">About us</a> </li>
+        <li><a  href="">Contact us</a> </li>
+        <li><a href="Jobuser.php">Jobs</a></li>
+        <li><a  href="apply.php">Apply Job</a> </li>
+        <li><a href="index.php">Logout</a></li>
+        
+          </ul>
+      </nav>
+</header>
+<section class="about-us">
+    <div class="about">
+      <img src="/static/imgg/team.webp" class="pic">
+      <div class="text">
+        <h2>About Us</h2>
+        <h5>KHOJOB-perfect way to find <span>Jobs</span></h5>
+          <p>Loremabx ipsum dolor sit amet, consectetnur adipisicing elit. Expedita natus ad sed harum itaque ullam enim quas, veniam accusantium, quia animi id eos adipisci iusto molestias asperiores explicabo cum vero atque amet corporis! Soluta illum facere consequuntur magni. Ullam dolorem repudiandae cumque voluptate consequatur consectetur, eos provident necessitatibus reiciendis corrupti!</p>
+        <div class="data">
+        <a href="#" class="hire">More Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="our-vision">
+    <div class="vision">
+      <img src="/static/imgg/team1.webp" class="pic">
+      <div class="text">
+        <h2>Our-Vision</h2>
+        <h5>KHOJOB-perfect way to find <span>Jobs</span></h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita natus ad sed harum itaque ullam enim quas, veniam accusantium, quia animi id eos adipisci iusto molestias asperiores explicabo cum vero atque amet corporis! Soluta illum facere consequuntur magni. Ullam dolorem repudiandae cumque voluptate 
+            consequatur consectetur, eos provident necessitatibus reiciendis corrupti!</p>
+      </div>
+    </div>
+  </section>
+  <section class="our-goals">
+    <div class="goals">
+      <img src="/static/imgg/goal.jpg" class="pic">
+      <div class="text">
+        <h2>Our-goals</h2>
+        <h5>KHOJOB-perfect way to find <span>Jobs</span></h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita natus ad sed harum itaque ullam enim quas, veniam accusantium, quia animi id eos adipisci iusto molestias asperiores explicabo cum vero atque amet corporis! Soluta illum facere consequuntur magni. Ullam dolorem repudiandae cumque voluptate 
+            consequatur consectetur, eos provident necessitatibus reiciendis corrupti!</p>
+      </div>
+    </div>
+  </section>
+{% include "footer.html"%}
+</body>
+</html>
+
