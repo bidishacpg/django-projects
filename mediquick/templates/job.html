@@ -24,106 +24,41 @@
 </header>
 <div class="jobs-list-container">
           <h2>jobs available</h2>
-          <div class="search_bar">
-        <input type="search" placeholder="Search job here...">
-        <select name="" id="">
-          <option>category</option>
-      <option>Education</option>
-          <option>finance</option>
-          <option>banking</option>
-        </select>
-        <select class="type">
-          <option>type</option>
-          <option>Part Time</option>
-          <option>Full time</option>
-        </select>
+          <div class="search_bar"> 
+            <form method="get">
+        <input type="text" name="jobname" >
+        <input type="submit" value="search">
+      </form>
       </div>
-<section class="second py-2">
+    </section>
+    <!--<section class="second py-2"> -->
+    <div class="jobs-list-container">
+    <div class="jobs">
+      {%for i in jobdetails %}
+              <div class="job">
+                <img src="/static/imgg/fuse.png" alt="">
+                <span class="job-title">{{i.job_title}}</span>
+              <!---  <h3 class="job-title">Software Engineer</h3> -->
+                <div class="details">
+                 {{i.job_details | safe }}
+    </div>
+    <span class="positions">{{i.job_positions}}</span>
+    </div>
+    {%empty%}
+    No Hospitals 
+    {% endfor %}
   
-<div class="jobs-list-container">
-<div class="jobs">
-          <div class="job">
-            <img src="/static/imgg/fuse.png" alt="">
-            <h3 class="job-title">Software Engineer</h3>
-            <div class="details">
-              Responsible for designing,developing and maintaining system and
-              applications. <br>
-              
-</div>
-<a href="apply.php" class="details-btn">Apply</a>
-<span class="positions">Fuse pvt ltd</span>
-
-</div>
-<div class="job">
-            <img src="/static/imgg/asterdio.png" alt="">
-            <h3 class="job-title">It officer</h3>
-            <div class="details">
-              Responsible for designing,developing and maintaining system and
-              applications.<br>
-</div>
-<a href="#" class="details-btn">Apply</a>
-<span class="positions">Aesterdio</span>
-</div>
-<div class="job">
-            <img src="imgg/AIT.jpeg" alt="">
-            <h3 class="job-title">product manager</h3>
-            <div class="details">
-              Responsible for designing,developing and maintaining system and
-              applications.<br>
-</div>
-<a href="#" class="details-btn">Apply</a>
-<span class="positions">AIT</span>
-</div>
-<div class="job">
-            <img src="/static/imgg/grow.jpeg" alt="">
-            <h3 class="job-title">Software Engineer</h3>
-            <div class="details">
-              Responsible for designing,developing and maintaining system and
-              applications.<br>
-</div>
-<a href="#" class="details-btn">Apply</a>
-<span class="positions">Grow</span>
-</div>
-<div class="job">
-            <img src="/static/imgg/miniso.jpg" alt="">
-            <h3 class="job-title">Receptionist</h3>
-            <div class="details">
-              Responsible for designing,developing and maintaining system and
-              applications.<br>
-</div>
-<a href="#" class="details-btn">Apply</a>
-<span class="positions">Miniso</span>
-</div>
-<div class="job">
-            <img src="/static/imgg/amazon.jpg" alt="">
-            <h3 class="job-title">assistant manager</h3>
-            <div class="details">
-              Responsible for designing,developing and maintaining system and
-              applications.<br>
-</div>
-<a href="#" class="details-btn">Apply</a>
-<span class="positions">amazon</span>
-</div>
-<div class="job">
-            <img src="/static/imgg/youtube.png" alt="">
-            <h3 class="job-title">Content manager</h3>
-            <div class="details">
-              Responsible for designing,developing and maintaining system and
-              applications.<br>
-</div>
-<a href="#" class="details-btn">Apply</a>
-<span class="positions">Youtube</span>
-</div>
-<div class="job">
-            <img src="/static/imgg/tiktok.png" alt="">
-            <h3 class="job-title">Content creater</h3>
-            <div class="details">
-              Responsible for designing,developing and maintaining system and
-              applications.<br>
-</div>
-<a href="#" class="details-btn">Apply</a>
-<span class="positions">tiktok</span>
-</div>
-</div>
-</div>
-</section>
+    </div>
+    </div>
+    </section> 
+        
+     <{% include "footer.html" %} 
+     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    
+      
+    </body>
+    </html>
+    

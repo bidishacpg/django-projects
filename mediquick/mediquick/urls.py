@@ -17,13 +17,23 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from mediquick import views
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.homepage , name="home"),
     path('aboutus/',views.aboutus, name="about"),
     path('form/',views.userform, name="form"),
-    path('job/',views.job, name="jobbb")
+    path('savefor/',views.saveform, name="savefor"),
+    path('job/',views.job, name="jobbb"),
+    path('newsdetails/',views.newsdetails)
+    
+
     
     
 ]
+
+if settings.DEBUG:
+    urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

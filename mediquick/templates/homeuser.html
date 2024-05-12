@@ -22,15 +22,17 @@
       <li class="{% if request.path == '/' %} active{% endif %}"><a  href="{% url 'home' %}">Home</a> </li>
       <li class="{% if request.path == '/aboutus/' %} active{% endif %}"><a  href="{% url 'about' %}">About us</a> </li>
       <li><a  href="form">Contact us</a> </li>
-      <li><a href="jobbb">Jobs</a></li>
+      <li><a href="job">Jobs</a></li>
       <li><a  href="apply.php">Apply Job</a> </li>
       <li><a href="index.php">Logout</a></li>
       
         </ul>
     </nav>
 </header>
-<marquee>
-  Welcome header
+<marquee onmouseover="stop()" onmouseout="start()">
+  {% for n in newsdata%}
+  <a href="/newsdetails/{{n.news_slug}}">{{n.news_title}}</a> &nbsp;&nbsp;
+  {%endfor%}
 </marquee>
 <section class="main py-5">
   <div class="container py-5">
