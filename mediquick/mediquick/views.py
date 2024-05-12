@@ -5,7 +5,8 @@ from job.models import Job
 def homepage(request):
     jobsdata=Job.objects.all().order_by('job_title')
     data={
-        'jobsdata':jobsdata
+        'jobsdata':jobsdata,
+        'newsdata':newsdata
         }
        
     return render(request,"homeuser.html",data)
