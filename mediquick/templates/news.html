@@ -22,6 +22,7 @@
 </header>
 <section class="about-us">
     <div class="about">
+      {%for newsdetails in newsdetails %}
       {% if newsdetails.news_images != Null %}
       <img src="/media/{{newsdetails.news_images}}" class="pic"/>
       {%endif%}
@@ -35,18 +36,18 @@
       </div>
     </div>
   </section>
-  <section class="our-vision">
+  {%endfor%}
+  <!--<section class="our-vision">
     <div class="vision">
       <img src="/media/{{newsdetails.news_images}}" class="pic"/>
       <div class="text">
-        <h2>Our-Vision</h2>
+        <h2>{{newsdetails.news_title}}</h2>
         <h5>KHOJOB-perfect way to find <span>Jobs</span></h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita natus ad sed harum itaque ullam enim quas, veniam accusantium, quia animi id eos adipisci iusto molestias asperiores explicabo cum vero atque amet corporis! Soluta illum facere consequuntur magni. Ullam dolorem repudiandae cumque voluptate 
-            consequatur consectetur, eos provident necessitatibus reiciendis corrupti!</p>
+          <p>{{newsdetails.news_desc | safe}}</p>
       </div>
     </div>
-  </section>
-  <section class="our-goals">
+  </section>-->
+ <!--- <section class="our-goals">
     <div class="goals">
       <img src="/static/imgg/goal.jpg" class="pic">
       <div class="text">
@@ -56,7 +57,7 @@
             consequatur consectetur, eos provident necessitatibus reiciendis corrupti!</p>
       </div>
     </div>
-  </section>
+  </section>-->
 {% include "footer.html"%}
 </body>
 </html>

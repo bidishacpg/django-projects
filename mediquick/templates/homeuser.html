@@ -31,7 +31,7 @@
 </header>
 <marquee onmouseover="stop()" onmouseout="start()">
   {% for n in newsdata%}
-  <a href="/newsdetails/{{n.news_slug}}">{{n.news_title}}</a> &nbsp;&nbsp;
+  <a href="/newsdetails/">{{n.news_title}}</a> &nbsp;&nbsp;
   {%endfor%}
 </marquee>
 <section class="main py-5">
